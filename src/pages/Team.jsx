@@ -1,28 +1,26 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { getPageContent } from '../utils/content';
+import SEO from '../components/SEO';
 
-const teamMembers = [
-  { name: "John Lundun", role: "CEO & Lead Composer", bio: "Award-winning producer with over a decade of experience across commercial campaigns and multi-platinum records.", image: null },
-  { name: "Sarah Michaels", role: "Head of Sync Licensing", bio: "Expert in catalog curation and navigating the complex legal landscapes of international broadcast licensing.", image: null },
-  { name: "David Osei", role: "Senior Sound Engineer", bio: "Specializing in spatial audio and Dolby Atmos mixing for cinematic releases and high-fidelity streaming.", image: null },
-  { name: "Chloe Vance", role: "Studio Manager", bio: "Ensuring flawless day-to-day operations and client relations for all Lundun Audio sessions.", image: null }
-];
+export default function Team({ previewContent }) {
+  const content = previewContent || getPageContent('team');
 
-export default function Team() {
   return (
     <>
-      <Helmet>
-        <title>Team | Lundun Audio</title>
-        <meta name="description" content="Meet the industry professionals behind Lundun Audio's premium sound." />
-      </Helmet>
+      <SEO
+        title="The Team — Lundun Audio Collective"
+        description="Meet the award-winning engineers, composers, and specialists behind Lundun Audio. A focused collective obsessed with premium sound for film, television, and advertising."
+        path="/team"
+      />
 
       <section className="pt-40 pb-20">
         <div className="container mx-auto px-6 max-w-5xl text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-            The Collective.
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 whitespace-pre-wrap">
+            {content.heroTitle}
           </h1>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto font-light leading-relaxed">
-            A specialized group of award-winning engineers, composers, and strategists driven by an obsession with perfect sound.
+          <p className="text-lg text-text-muted max-w-2xl mx-auto font-light leading-relaxed whitespace-pre-wrap">
+            {content.heroSubtitle}
           </p>
         </div>
       </section>
@@ -30,7 +28,7 @@ export default function Team() {
       <section className="pb-32 mb-20">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
-            {teamMembers.map((member, i) => (
+            {content.members?.map((member, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}

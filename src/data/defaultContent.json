@@ -1,0 +1,12 @@
+{
+  "pages": [
+    {
+      "id": "1",
+      "title": "Welcome to Lundun Audio",
+      "description": "This is a sample page generated from the CMS.",
+      "media": [
+        "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop"
+      ]
+    }
+  ]
+}

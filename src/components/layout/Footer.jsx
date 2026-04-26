@@ -36,6 +36,7 @@ export default function Footer() {
                 <li><Link to="/about" className="text-text-muted hover:text-accent transition-colors">About Us</Link></li>
                 <li><Link to="/services" className="text-text-muted hover:text-accent transition-colors">Expertise</Link></li>
                 <li><Link to="/portfolio" className="text-text-muted hover:text-accent transition-colors">Selected Works</Link></li>
+                <li><Link to="/admin" className="text-text-muted hover:text-accent transition-colors">Admin Login</Link></li>
               </ul>
             </div>
 

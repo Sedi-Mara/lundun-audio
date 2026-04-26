@@ -1,0 +1,153 @@
+{
+  "settings": {
+    "font": "Inter",
+    "cloudinaryCloudName": "dtl8l1au7"
+  },
+  "home": {
+    "title": "Home",
+    "heroTitle": "Audio solutions that elevate stories.",
+    "heroSubtitle": "From compelling film scores and immersive TV themes to dynamic commercial soundtracks. We deliver professional composition, sound design, and full post-production.",
+    "ctaTitle": "Ready to elevate your sound?",
+    "ctaSubtitle": "Reach out to discuss how a refined auditory presence can quietly transform your brand or production.",
+    "logos": [
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Netflix_2015_logo.svg", "alt": "Netflix", "colored": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Apple_Music_logo.svg", "alt": "Apple Music", "colored": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Self_service_showmax_logo_new.svg", "alt": "Showmax", "colored": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Nando%27s_wordmark.svg", "alt": "Nando's", "colored": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Sony_Music_Entertainment_Logo_2023.svg", "alt": "Sony Music", "colored": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/game-seeklogo.svg", "alt": "Game Stores", "colored": true },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/JSE.svg", "alt": "JSE", "colored": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/msmlogoweb.png", "alt": "MSM Property Fund", "colored": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/clover-logo-2024.svg", "alt": "Clover", "colored": true }
+    ],
+    "campaigns": [
+      { "brand": "Nando's", "campaign": "Open Letter", "videoId": "lV5yMuKeTlE" }, 
+      { "brand": "Game Stores", "campaign": "Back to School", "videoId": "85_I3SGIY1o" },
+      { "brand": "Nando's x Kwesta", "campaign": "Oh What A Place", "videoId": "di10pOkQxrk", "native": true },
+      { "brand": "Game Stores", "campaign": "Heritage Day", "videoId": "xWyXW8s_Rp8" },
+      { "brand": "JSE", "campaign": "Claim It", "videoId": "RLaC7aGCtNE", "native": true },
+      { "brand": "Tropika", "campaign": "Nothing Smoother", "videoId": "DtucbqCEB4M" },
+      { "brand": "Game Stores", "campaign": "Black Friday", "videoId": "4V3wM-29cho" }
+    ],
+    "libraryTitle": "Soundtrack Library",
+    "librarySubtitle": "Curated short audio snippets for advertisement soundtracks.",
+    "library": [
+      { "title": "Expensive Whisky", "audioSrc": "/Expensive Whisky.mp3" },
+      { "title": "Amapiano Lounge Bar", "audioSrc": "/Amapiano Lounge Bar.wav" },
+      { "title": "African Film Score", "audioSrc": "/African Film Score.wav" }
+    ],
+    "capabilities": [
+      { "title": "Original Composition", "desc": "Bespoke scores crafted for film, television series, advertising, and documentaries.", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/cap_composition.png" },
+      { "title": "Sync Licensing", "desc": "High-quality, licensable tracks completely ready for media placement and campaigns.", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/cap_licensing.png" },
+      { "title": "Mixing & Mastering", "desc": "Professional audio refinement services to enhance overall presence and sonic quality.", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/cap_mixing.png" }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "heroTitle": "Creative force &\nproducer.",
+    "heroSubtitle": "John Lundun is a SAMA-Nominated artist and SAMA-winning music producer and composer, specializing in creating iconic sound for major brands, television, and film.",
+    "accolades": [
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/SAMA31-Black-1.png", "alt": "SAMA Award", "label": "SAMA Nominated", "isWhiteBlock": true, "useOriginalColors": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Netflix_2015_logo.svg", "alt": "Netflix", "label": "Netflix", "isWhiteBlock": false, "useOriginalColors": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Self_service_showmax_logo_new.svg", "alt": "Showmax", "label": "Showmax", "isWhiteBlock": false, "useOriginalColors": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Apple_Music_logo.svg", "alt": "Apple Music", "label": "Apple Music", "isWhiteBlock": false, "useOriginalColors": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Damelin_logo_and_motto.svg", "alt": "Damelin", "label": "Damelin", "isWhiteBlock": false, "useOriginalColors": false },
+      { "src": "https://res.cloudinary.com/dtl8l1au7/image/upload/Tshwane_University_of_Technology_logo.svg", "alt": "TUT", "label": "TUT Alumni", "isWhiteBlock": false, "useOriginalColors": false }
+    ],
+    "sections": [
+      {
+        "title": "Academic Foundation",
+        "content": "Built on a rigid professional foundation, including a Damelin College certificate in Contemporary Music and a TUT Diploma in Jazz & Popular Music. We expertly bridge true artistic innovation with commercial excellence, ensuring every project is not just heard, but deeply felt."
+      },
+      {
+        "title": "Industry Collaborator",
+        "content": "With a versatile, genre-spanning expertise, Lundun has engineered and composed alongside South Africa's music elite. Credits include: K.O, Kabza De Small, Kwesta, Jesse Clegg, Manana, Samthing Soweto, Msaki, Berita, Ndlovu Youth Choir, Sun El Musician, Thando Zide, and Simphiwe Dana."
+      },
+      {
+        "title": "Innovator in Sound",
+        "content": "Pioneering the new genre Lo-Fiano (a fusion of Amapiano and Lofi) in collaboration with Apple Music, Lundun is at the forefront of musical trends. His scoring credentials for film and TV such as Outlaws, Piano Love (Netflix), Mpondoland, and Mkhize to Masemola highlight his ability to craft compelling narratives and emotional depth through music."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "heroTitle": "Refined Capabilities.",
+    "heroSubtitle": "Professional composition, licensing, and audio engineering ready for premium media format placements.",
+    "list": [
+       { "title": "Original Composition", "desc": "Bespoke scores for film, television series, advertising campaigns, and documentaries. We craft compelling sonic narratives tailored to your unique visual story.", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/cap_composition.png" },
+       { "title": "Voice Over Recording", "desc": "Highly professional voice over capture services for commercials, narrations, and broadcast media. Pristine recording environments for absolute clarity.", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/srv_voiceover.png" },
+       { "title": "Sync Licensing", "desc": "Access to high-quality, fully licensable tracks ready for immediate media placement. An expansive library crossing varying genres and emotional palletes.", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/cap_licensing.png" },
+       { "title": "Mixing & Mastering", "desc": "Industry-standard mixing and mastering services designed to heavily enhance your audio quality, ensuring it translates perfectly across all modern playback platforms.", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/cap_mixing.png" }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "heroTitle": "Selected Works.",
+    "heroSubtitle": "Explore our hand-crafted commercial scores, television themes, and elite original music productions.",
+    "projects": [
+      { "brand": "Piano Love", "desc": "Netflix Movie Scoring", "category": "Film & TV", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/Piano_Love_Netflix_Movie.png" },
+      { "brand": "Outlaws Season 2", "desc": "Showmax Series Core Audio", "category": "Film & TV", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/outlaws_s2_Showmax_Series.webp" },
+      { "brand": "Nando's", "desc": "Open Letter Campaign", "category": "Advertisements", "videoId": "lV5yMuKeTlE" }, 
+      { "brand": "Game Stores", "desc": "Back to School", "category": "Advertisements", "videoId": "85_I3SGIY1o" },
+      { "brand": "Berita", "desc": "Songs In The Key Of Life (SAMA Award Winning Album)", "category": "Original Music", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/Berita_Songs_In_The_Key_Of_Life.jpg" },
+      { "brand": "John Lundun", "desc": "Lo-Fiano", "category": "Original Music", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/John_Lundun_Lo-Fiano.jpeg" },
+      { "brand": "Nando's x Kwesta", "desc": "Oh What A Place", "category": "Advertisements", "videoId": "di10pOkQxrk", "native": true },
+      { "brand": "Mkhize to Masemola", "desc": "Showmax Movie Sound Design", "category": "Film & TV", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/Mkhize_to_Masemola_Showmax_Movie.png" },
+      { "brand": "Kwesta ft Wale", "desc": "Spirit", "category": "Original Music", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/Kwesta_ft_Wale_Spirit.jpg" },
+      { "brand": "Game Stores", "desc": "Heritage Day", "category": "Advertisements", "videoId": "xWyXW8s_Rp8" },
+      { "brand": "JSE", "desc": "Claim It", "category": "Advertisements", "videoId": "RLaC7aGCtNE", "native": true },
+      { "brand": "Dulas", "desc": "eVod Movie Theme & Score", "category": "Film & TV", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/Dulas_eVod_Movie.png" },
+      { "brand": "Major League DJz & Azana", "desc": "For A Reason", "category": "Original Music", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/azana-major-league-djz-for-a-reason.jpg" },
+      { "brand": "Tropika", "desc": "Nothing Smoother", "category": "Advertisements", "videoId": "DtucbqCEB4M" },
+      { "brand": "Berita & Ndlovu Youth Choir", "desc": "GBV Campaign Song", "category": "Original Music", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/Berita_Ndlovu_Youth_Choir_GBV.jpeg" },
+      { "brand": "NaakMusiq ft Bucie", "desc": "Ntombi", "category": "Original Music", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/NaakMusiq_ft_Bucie_Ntombi.jpg" },
+      { "brand": "Game Stores", "desc": "Black Friday", "category": "Advertisements", "videoId": "4V3wM-29cho" },
+      { "brand": "Thabsie ft JR", "desc": "African Queen", "category": "Original Music", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/Thabsie_ft_JR_African_Queen.jpg" },
+      { "brand": "Abo Mkhulu", "desc": "Movie Scoring", "category": "Film & TV", "image": "https://res.cloudinary.com/dtl8l1au7/image/upload/Abo_Mkhulu_Movie.jpg" }
+    ]
+  },
+  "team": {
+    "title": "Team",
+    "heroTitle": "The Collective.",
+    "heroSubtitle": "A specialized group of award-winning engineers, composers, and strategists driven by an obsession with perfect sound.",
+    "members": [
+      { "name": "John Lundun", "role": "CEO & Lead Composer", "bio": "Award-winning producer with over a decade of experience across commercial campaigns and multi-platinum records.", "image": "" },
+      { "name": "Sarah Michaels", "role": "Head of Sync Licensing", "bio": "Expert in catalog curation and navigating the complex legal landscapes of international broadcast licensing.", "image": "" },
+      { "name": "David Osei", "role": "Senior Sound Engineer", "bio": "Specializing in spatial audio and Dolby Atmos mixing for cinematic releases and high-fidelity streaming.", "image": "" },
+      { "name": "Chloe Vance", "role": "Studio Manager", "bio": "Ensuring flawless day-to-day operations and client relations for all Lundun Audio sessions.", "image": "" }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "heroTitle": "Let's Talk Phase",
+    "heroSubtitle": "Get in touch to align on vision and explore exactly how we can create value for your project.",
+    "email": "LundunJohn@gmail.com",
+    "phone": "+27 76 086 6806",
+    "address": "Pretoria, South Africa"
+  },
+  "libraryPage": {
+    "title": "Library",
+    "heroTitle": "Full Soundtrack Library",
+    "heroSubtitle": "Explore our complete collection of meticulously crafted audio tracks.",
+    "tracks": [
+      { "title": "African Film Score", "audioSrc": "/library/African Film Score.wav", "tags": ["Cinematic", "Orchestral", "Film & TV"] },
+      { "title": "Amapiano Lounge Bar", "audioSrc": "/library/Amapiano Lounge Bar.wav", "tags": ["Amapiano", "Lounge", "Afro"] },
+      { "title": "Amapiano NightClub", "audioSrc": "/library/Amapiano NightClub.wav", "tags": ["Amapiano", "Dance", "Afro"] },
+      { "title": "Amapiano TV Music", "audioSrc": "/library/Amapiano TV Music.wav", "tags": ["Amapiano", "Broadcast", "Afro"] },
+      { "title": "Black Dune", "audioSrc": "/library/Black Dune.wav", "tags": ["Cinematic", "Ambient", "Dramatic"] },
+      { "title": "Cape Town Sunset", "audioSrc": "/library/Cape Town Sunset.wav", "tags": ["Ambient", "Afro", "Lounge"] },
+      { "title": "Champion Music", "audioSrc": "/library/Champion Music.wav", "tags": ["Corporate", "Uplifting", "Sport"] },
+      { "title": "Expensive Whisky", "audioSrc": "/library/Expensive Whisky.mp3", "tags": ["Jazz", "Lounge", "Corporate"] },
+      { "title": "Funky Bar", "audioSrc": "/library/Funky Bar.mp3", "tags": ["Funk", "Jazz", "Lounge"] },
+      { "title": "Glow", "audioSrc": "/library/Glow.wav", "tags": ["Ambient", "Uplifting", "Cinematic"] },
+      { "title": "Kiddies Show", "audioSrc": "/library/Kiddies Show.wav", "tags": ["Children", "Uplifting", "Broadcast"] },
+      { "title": "Lets Go to Church", "audioSrc": "/library/Lets Go to Church.wav", "tags": ["Gospel", "Uplifting", "Afro"] },
+      { "title": "Life & Colors", "audioSrc": "/library/Life & Colors.wav", "tags": ["Uplifting", "Corporate", "Ambient"] },
+      { "title": "Lolipop", "audioSrc": "/library/Lolipop.mp3", "tags": ["Pop", "Uplifting", "Children"] },
+      { "title": "News Outlet (Hopeful)", "audioSrc": "/library/News Outlet (Hopeful).wav", "tags": ["Corporate", "Broadcast", "Orchestral"] },
+      { "title": "Panda", "audioSrc": "/library/Panda.wav", "tags": ["Cinematic", "Ambient", "Film & TV"] },
+      { "title": "Tears (Master)", "audioSrc": "/library/Tears (Master).wav", "tags": ["Emotional", "Cinematic", "Orchestral"] },
+      { "title": "Tech Space", "audioSrc": "/library/Tech Space.mp3", "tags": ["Corporate", "Electronic", "Broadcast"] }
+    ]
+  }
+}

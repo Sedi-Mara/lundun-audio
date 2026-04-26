@@ -1,44 +1,26 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { getPageContent } from '../utils/content';
+import SEO from '../components/SEO';
 
-const servicesList = [
-  {
-    title: 'Original Composition',
-    desc: 'Bespoke scores for film, television series, advertising campaigns, and documentaries. We craft compelling sonic narratives tailored to your unique visual story.',
-    image: '/cap_composition.png'
-  },
-  {
-    title: 'Voice Over Recording',
-    desc: 'Highly professional voice over capture services for commercials, narrations, and broadcast media. Pristine recording environments for absolute clarity.',
-    image: '/srv_voiceover.png'
-  },
-  {
-    title: 'Sync Licensing',
-    desc: 'Access to high-quality, fully licensable tracks ready for immediate media placement. An expansive library crossing varying genres and emotional palletes.',
-    image: '/cap_licensing.png'
-  },
-  {
-    title: 'Mixing & Mastering',
-    desc: 'Industry-standard mixing and mastering services designed to heavily enhance your audio quality, ensuring it translates perfectly across all modern playback platforms.',
-    image: '/cap_mixing.png'
-  }
-];
+export default function Services({ previewContent }) {
+  const content = previewContent || getPageContent('services');
 
-export default function Services() {
   return (
     <>
-      <Helmet>
-        <title>Services | Lundun Audio</title>
-        <meta name="description" content="Original Composition, Voice Over Recording, Sync Licensing, and Mixing services by John Lundun." />
-      </Helmet>
+      <SEO
+        title="Advertising Music Services — Commercial, Film & TV"
+        description="From TV commercial soundtracks and sonic branding to film scoring and sync licensing — Lundun Audio delivers professional audio services for international brands, agencies, and broadcasters."
+        path="/services"
+      />
 
       <section className="pt-40 pb-20">
         <div className="container mx-auto px-6 max-w-5xl text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-            Refined Capabilities.
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 whitespace-pre-wrap">
+            {content.heroTitle}
           </h1>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto font-light leading-relaxed">
-            Professional composition, licensing, and audio engineering ready for premium media format placements.
+          <p className="text-lg text-text-muted max-w-2xl mx-auto font-light leading-relaxed whitespace-pre-wrap">
+            {content.heroSubtitle}
           </p>
         </div>
       </section>
@@ -46,7 +28,7 @@ export default function Services() {
       <section className="py-20 mb-20">
         <div className="container mx-auto px-6 max-w-6xl focus:outline-none">
           <div className="flex flex-col gap-24 md:gap-32">
-            {servicesList.map((svc, i) => (
+            {content.list?.map((svc, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 30 }}

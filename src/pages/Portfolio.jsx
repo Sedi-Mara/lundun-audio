@@ -1,26 +1,34 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getPageContent } from '../utils/content';
+import SEO from '../components/SEO';
 
 const CustomVideoPlayer = ({ videoId, title, customCover, native }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [thumbState, setThumbState] = useState(0);
 
+  const isRawVideo = videoId && videoId.match(/\.(mp4|webm|ogg)|data:video/i);
+
   if (native) {
     return (
-      <div className="absolute inset-0 w-full h-full">
-        <iframe 
-          src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`}
-          title={title}
-          className="absolute inset-0 w-full h-full border-0 bg-black z-30"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen
-        ></iframe>
+      <div className="absolute inset-0 w-full h-full z-30 bg-black">
+        {isRawVideo ? (
+          <video src={videoId} controls autoPlay className="absolute inset-0 w-full h-full object-cover" />
+        ) : (
+          <iframe 
+            src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`}
+            title={title}
+            className="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          ></iframe>
+        )}
       </div>
     );
   }
   
-  const thumbUrls = [
+  const thumbUrls = isRawVideo ? [customCover].filter(Boolean) : [
     customCover,
     `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
     `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
@@ -31,25 +39,35 @@ const CustomVideoPlayer = ({ videoId, title, customCover, native }) => {
   return (
     <div className="absolute inset-0 w-full h-full cursor-pointer group/video" onClick={() => setIsPlaying(true)}>
       {isPlaying ? (
-        <iframe 
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0&showinfo=0`}
-          title={title}
-          className="absolute inset-0 w-full h-full border-0 bg-black z-30"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen
-        ></iframe>
+        isRawVideo ? (
+          <video src={videoId} controls autoPlay className="absolute inset-0 w-full h-full object-cover bg-black z-30" />
+        ) : (
+          <iframe 
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0&showinfo=0`}
+            title={title}
+            className="absolute inset-0 w-full h-full border-0 bg-black z-30"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          ></iframe>
+        )
       ) : (
         <>
-          <img 
-            src={thumbUrls[thumbState]} 
-            alt={title} 
-            className="absolute inset-0 w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700 opacity-80 group-hover/video:opacity-100" 
-            onError={() => {
-              if (thumbState < thumbUrls.length - 1) {
-                setThumbState(prev => prev + 1);
-              }
-            }} 
-          />
+          {thumbUrls.length > 0 ? (
+            <img 
+              src={thumbUrls[thumbState]} 
+              alt={title} 
+              className="absolute inset-0 w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700 opacity-80 group-hover/video:opacity-100" 
+              onError={() => {
+                if (thumbState < thumbUrls.length - 1) {
+                  setThumbState(prev => prev + 1);
+                }
+              }} 
+            />
+          ) : (
+            <div className="absolute inset-0 w-full h-full bg-black/80 flex items-center justify-center border border-white/5 group-hover/video:bg-black/60 transition-colors duration-700">
+               <span className="text-white/30 text-xs font-mono uppercase tracking-widest">VIDEO</span>
+            </div>
+          )}
           <div className="absolute inset-0 bg-bg-dark/30 group-hover/video:bg-transparent transition-colors duration-700 z-10" />
           
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-surface/60 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 group-hover/video:scale-110 group-hover/video:bg-surface/90 transition-all duration-500 shadow-2xl z-20">
@@ -61,59 +79,29 @@ const CustomVideoPlayer = ({ videoId, title, customCover, native }) => {
   );
 };
 
-const projects = [
-  { brand: "Piano Love", desc: "Netflix Movie Scoring", category: "Film & TV", image: "/Piano Love (Piano Love Netflix Movie).png" },
-  { brand: "Outlaws Season 2", desc: "Showmax Series Core Audio", category: "Film & TV", image: "/outlaws S2 (Showmax Series).png" },
-  
-  { brand: "Nando's", desc: "Open Letter Campaign", category: "Advertisements", videoId: "lV5yMuKeTlE" }, 
-  { brand: "Game Stores", desc: "Back to School", category: "Advertisements", videoId: "85_I3SGIY1o" },
-
-  { brand: "Berita", desc: "Songs In The Key Of Life (SAMA Award Winning Album)", category: "Original Music", image: "/Berita - Songs In The Key Of Life (SAMA Award Winning Album).jpg" },
-  { brand: "John Lundun", desc: "Lo-Fiano", category: "Original Music", image: "/John Lundun - Lo-Fiano.jpeg" },
-
-  { brand: "Nando's x Kwesta", desc: "Oh What A Place", category: "Advertisements", videoId: "di10pOkQxrk", native: true },
-  
-  { brand: "Mkhize to Masemola", desc: "Showmax Movie Sound Design", category: "Film & TV", image: "/Mkhize to Masemola (Showmax Movie).png" },
-  { brand: "Kwesta ft Wale", desc: "Spirit", category: "Original Music", image: "/Kwesta ft Wale - Spirit.jpg" },
-
-  { brand: "Game Stores", desc: "Heritage Day", category: "Advertisements", videoId: "xWyXW8s_Rp8" },
-  { brand: "JSE", desc: "Claim It", category: "Advertisements", videoId: "RLaC7aGCtNE", native: true },
-
-  { brand: "Dulas", desc: "eVod Movie Theme & Score", category: "Film & TV", image: "/Dulas (eVod Movie).png" },
-  { brand: "Major League DJz & Azana", desc: "For A Reason", category: "Original Music", image: "/azana-major-league-djz-for-a-reason-ft-ntokzin-phonikz-john-lundun-fakaza-2024_03_08_09_02_33-ubetoo.jpg" },
-
-  { brand: "Tropika", desc: "Nothing Smoother", category: "Advertisements", videoId: "DtucbqCEB4M" },
-  
-  { brand: "Berita & Ndlovu Youth Choir", desc: "GBV Campaign Song", category: "Original Music", image: "/Berita & Ndlovu Youth Choir - GBV Campaign Song.jpeg" },
-  { brand: "NaakMusiq ft Bucie", desc: "Ntombi", category: "Original Music", image: "/NaakMusiq ft Bucie - Ntombi.jpg" },
-  
-  { brand: "Game Stores", desc: "Black Friday", category: "Advertisements", videoId: "4V3wM-29cho" },
-  
-  { brand: "Thabsie ft JR", desc: "African Queen", category: "Original Music", image: "/Thabsie ft JR - African Queen .jpg" },
-  { brand: "Abo Mkhulu", desc: "Movie Scoring", category: "Film & TV", image: "/Abo Mkhulu Movie.jpg" },
-];
-
 const categories = ['All', 'Advertisements', 'Film & TV', 'Original Music'];
 
-export default function Portfolio() {
+export default function Portfolio({ previewContent }) {
+  const content = previewContent || getPageContent('portfolio');
   const [activeTab, setActiveTab] = useState('All');
 
-  const filteredProjects = projects.filter(p => activeTab === 'All' || p.category === activeTab);
+  const filteredProjects = (content.projects || []).filter(p => activeTab === 'All' || p.category === activeTab);
 
   return (
     <>
-      <Helmet>
-        <title>Portfolio | Lundun Audio</title>
-        <meta name="description" content="A curated selection of our sonic branding, TV scoring, and music production projects." />
-      </Helmet>
+      <SEO
+        title="Portfolio — Commercial & Brand Advertising Scores"
+        description="Proven commercial credits across global brands: Nando's, Game Stores, JSE, Tropika, Netflix, and Showmax. Explore how Lundun Audio crafts advertising music that drives real brand impact."
+        path="/portfolio"
+      />
 
       <section className="pt-40 pb-16">
         <div className="container mx-auto px-6 max-w-6xl text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-            Selected Works.
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 whitespace-pre-wrap">
+            {content.heroTitle}
           </h1>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto font-light leading-relaxed mb-12">
-            Explore our hand-crafted commercial scores, television themes, and elite original music productions.
+          <p className="text-lg text-text-muted max-w-2xl mx-auto font-light leading-relaxed mb-12 whitespace-pre-wrap">
+            {content.heroSubtitle}
           </p>
 
           {/* Filter Bar */}
